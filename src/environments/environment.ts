@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: 'AIzaSyDyRHO4V97DbOsLf7Ya531LoxZrfxFzj04',
+    authDomain: 'reservationapp-cf0aa.firebaseapp.com',
+    databaseURL: 'https://reservationapp-cf0aa.firebaseio.com',
+    projectId: 'reservationapp-cf0aa',
+    storageBucket: 'reservationapp-cf0aa.appspot.com',
+    messagingSenderId: '917790399921',
+    appId: '1:917790399921:web:d134c3414e67b00d86f190',
+    measurementId: 'G-MK0GV5GJYQ',
+  },
 };
 
 /*
