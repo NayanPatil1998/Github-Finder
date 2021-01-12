@@ -1,1 +1,6 @@
-<p>repos works!</p>
+<div class="list-group" *ngFor="let repo of repos">
+    <a href="{{repo.html_url}}"  class="list-group-item list-group-item-action" aria-current="true">
+      {{repo.name}}
+    </a>
+   
+  </div>

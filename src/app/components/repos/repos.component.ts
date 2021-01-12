@@ -1,15 +1,36 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  OnChanges,
+  ChangeDetectorRef,
+} from '@angular/core';
+import { GithubService } from '../../services/github.service';
 
 @Component({
   selector: 'app-repos',
   templateUrl: './repos.component.html',
-  styleUrls: ['./repos.component.css']
+  styleUrls: ['./repos.component.css'],
 })
-export class ReposComponent implements OnInit {
+export class ReposComponent implements OnInit, OnChanges {
+  @Input() repoUrl: string;
+  repos = [];
 
-  constructor() { }
+  constructor(private github: GithubService, private ref: ChangeDetectorRef) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  ngOnChanges(): void {
+    if (this.repoUrl) {
+      this.github.getRepos(this.repoUrl).subscribe((repos: []) => {
+        this.repos = repos;
+        this.ref.detectChanges();
+      },
+      (err) => {
+        console.log(err)
+      }
+      );
+    } else {
+    }
   }
-
 }
