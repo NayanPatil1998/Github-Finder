@@ -2,16 +2,16 @@
     <div class="row mt-5">
       <div class="col col-6 offset-3">
         <div class="card">
-          <div class="card-header text-center text-info text-uppercase">
+          <div class="card-header text-center text-dark text-uppercase">
             Sign In Please
           </div>
           <div class="card-body">
-            <form (ngSubmit)= "onSubmit(f)" #f= "ngForm">
+            <form (ngSubmit)= "onSubmit(f)" #f= "ngForm" ngNativeValidate>
               <div class="form-group row">
                 <label class="col-sm-3 col-form-label" for="email">Email</label>
                 <div class="col-sm-9">
                   <input
-                    type="text"
+                    type="email"
                     class="form-control"
                     id="email"
                     name="email"
@@ -32,6 +32,7 @@
                     id="password"
                     name="password"
                     ngModel
+                    minlength=6
                     placeholder="Enter Password"
                     required
                   />
@@ -39,7 +40,7 @@
                 </div>
               </div>
               <div class="text-center">
-                  <button class="btn btn-primary" type="submit ">
+                  <button class="btn btn-dark" type="submit ">
                       Sign In
                   </button>
               </div>

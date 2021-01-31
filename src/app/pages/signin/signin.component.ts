@@ -28,7 +28,7 @@ export class SigninComponent implements OnInit {
     })
     .catch((err)=> {
       console.log(err);
-      this.toastr.error("Something is wrong, please try again")
+      this.toastr.error(err.message)
     })
   }
 
