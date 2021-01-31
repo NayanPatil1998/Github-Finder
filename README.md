@@ -1,6 +1,6 @@
 # Github Finder WebApp
 
-![Project Image](https://github.com/NayanPatil1998/insta-clone-angular/blob/master/screenshots/SS1.png)
+![Project Image](https://github.com/NayanPatil1998/Github-Finder/blob/main/GithubFinder.gif)
 
 ---
 
@@ -18,7 +18,7 @@ You're sections headers will be used to reference location of destination.
 
 Github Finder App can be used for to search github profiles, user have to login or signup then user can search github profiles by entering the Github username in search box and also view all the repositories of that profile. This project developed in Angular framework with Firebase Authentication.
 
-- [Live project link](https://instagramcloneangular.netlify.app/)
+- [Live project link](https://githubfinderwebapp.netlify.app/)
 
 #### Technologies
 
