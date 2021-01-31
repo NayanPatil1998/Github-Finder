@@ -9,12 +9,14 @@ import { GithubService } from 'src/app/services/github.service';
 export class HomeComponent implements OnInit {
 
   user = null;
-  userName: string;
+  userName: string = "nayanpatil1998";
   error = null;
 
   constructor(private github: GithubService, private ref: ChangeDetectorRef) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.handleFindUser();
+  }
 
   handleFindUser(){
     this.github.getUserDetails(this.userName).subscribe(
