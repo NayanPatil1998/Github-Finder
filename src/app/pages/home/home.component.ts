@@ -9,13 +9,13 @@ import { GithubService } from 'src/app/services/github.service';
 export class HomeComponent implements OnInit {
 
   user = null;
-  userName: string = "nayanpatil1998";
+  userName: string;
   error = null;
 
   constructor(private github: GithubService, private ref: ChangeDetectorRef) {}
 
   ngOnInit(): void {
-    this.handleFindUser();
+    // this.handleFindUser();
   }
 
   handleFindUser(){
