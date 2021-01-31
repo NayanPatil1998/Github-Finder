@@ -1,10 +1,10 @@
-<div class="row justify-content-center">
+<div class="row text-center" style="margin-top: 20px;">
   <div class="col repoCard" *ngFor="let repo of repos">
-    <div class="card text-dark bg-light mb-3" style="max-width: 18rem;">
+    <div class="card text-dark bg-light mb-3" style="width: 300px;">
       <div class="card-header"> {{repo.language}} </div>
       <div class="card-body">
         <h6 class="card-text mb-4">{{repo.name}}</h6>
-        <a href="#" class="btn btn-dark">Check</a>
+        <a href="{{repo.html_url}}" class="btn btn-dark">Check</a>
       </div>
       <div class="card-footer text-muted">
         Last updated : {{repo.updated_at | date: "short"}}
